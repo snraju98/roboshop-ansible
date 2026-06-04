@@ -1,0 +1,5 @@
+ansible_user: ec2-user
+ansible_password: DevOps321
+MONGODB_HOST: mongodb.daws90s.fun
+REDIS_HOST: redis.daws90s.fun
+CATALOGUE_HOST: catalogue.daws90s.fun
