@@ -37,8 +37,8 @@
       dest: /app
       remote_src: yes
   - name: install dependencies
-     community.general.npm:
-     path: /app
+    community.general.npm:
+      path: /app
   - name: copy catalogue service
     template:
       src: catalogue.service.j2
@@ -57,7 +57,6 @@
     tags:
     - mongodb
   - name: print catalogue_output
-    debug:
+    debug: 
       msg: "{{ catalogue_output }}"
     tags:
-    - mongodb
