@@ -1,7 +1,7 @@
-- - name: configure user server
-  hosts: user
-  become: yes
-  tasks:
+- name: configure user server
+    hosts: user
+    become: yes
+    tasks:
   - name: enable nodejs 20
     command: dnf module enable nodejs:20 -y
   - name: install nodejs
