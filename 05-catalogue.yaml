@@ -1,8 +1,8 @@
-- name: configure catalouge server
-  hosts: catalouge
+- name: configure catalogue server
+  hosts: catalogue
   become: yes
   tasks:
-  - name: enable node js 20
+  - name: enable nodejs 20
     command: dnf module enable nodejs:20 -y
   - name: install nodejs 20
     package:
@@ -14,11 +14,11 @@
       system: true
       home: /app
       shell: /sbin/nologin
-      comment: "Roboshopshop System user"
+      comment: "Roboshop System user"
   - name: remove app directory
     file:
-     path: /app
-     state: absent
+      path: /app
+      state: absent
   - name: delete catalogue.zip in tmp directory
     file:
       path: /tmp/catalogue.zip
@@ -36,4 +36,3 @@
       src: /tmp/catalogue.zip
       dest: /app
       remote_src: yes
-  
