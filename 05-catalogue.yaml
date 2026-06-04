@@ -60,4 +60,4 @@
     debug: 
       msg: "{{ catalogue_output }}"
     tags:
-    - mongodb.
+    - mongodb
